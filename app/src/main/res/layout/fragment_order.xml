@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="30dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp">
+
+    <TextView
+        android:id="@+id/tv_order_code"
+        android:text="ORDER"
+        android:textSize="25dp"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="SHIPPING"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:text="Name:"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:text="Email:"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:text="Address:"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_delivery"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="20dp"
+        android:background="#FAD4D4"
+        android:text="Not Delivery"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#E6E6E6"/>
+
+    <TextView
+        android:text="PAYMENT METHOD"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Method: PayPal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="20dp"
+        android:background="#FAD4D4"
+        android:text="Not Paid"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#E6E6E6"/>
+
+    <TextView
+        android:text="ORDER ITEMS"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_product"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="#E6E6E6"/>
+
+        <TextView
+            android:id="@+id/text1"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintTop_toTopOf="@id/view_top"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="ORDER SUMMARY"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@+id/view_right"
+            android:background="#E6E6E6"/>
+
+        <TextView
+            android:id="@+id/text2"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="Items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text2"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@+id/view_right"
+            android:background="#E6E6E6"/>
+
+        <TextView
+            android:id="@+id/text3"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="Shipping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text3"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@+id/view_right"
+            android:background="#E6E6E6"/>
+
+        <TextView
+            android:id="@+id/text4"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintTop_toBottomOf="@id/view3"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="Tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text4"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@+id/view_right"
+            android:background="#E6E6E6"/>
+
+        <TextView
+            android:id="@+id/text5"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintTop_toBottomOf="@id/view4"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="Total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text5"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@+id/view_right"
+            android:background="#E6E6E6"/>
+
+        <View
+            android:id="@+id/view_bot"
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/btn_the_ghi_no"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@id/view_right"
+            android:background="#E6E6E6"/>
+
+        <View
+            android:id="@+id/view_left"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_the_ghi_no"
+            android:background="#E6E6E6"/>
+
+        <View
+            android:id="@+id/view_right"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_the_ghi_no"
+            app:layout_constraintEnd_toEndOf="@id/view_top"
+            android:background="#E6E6E6"/>
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@id/view_right"
+            app:layout_constraintTop_toBottomOf="@id/view5"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="PLACE ORDER" />
+
+        <Button
+            android:id="@+id/btn_paypal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@id/view_right"
+            app:layout_constraintTop_toBottomOf="@id/view5"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="PAYPAL" />
+
+        <Button
+            android:id="@+id/btn_the_ghi_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@id/view_left"
+            app:layout_constraintEnd_toEndOf="@id/view_right"
+            app:layout_constraintTop_toBottomOf="@id/btn_order"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="10dp"
+            android:text="Thẻ ghi nợ hoặc tín dụng"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
